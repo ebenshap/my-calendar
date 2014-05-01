@@ -1,0 +1,49 @@
+.centeredGradient(@outerColor, @innerColor){
+  background: @outerColor; /* Old browsers */
+background: -moz-linear-gradient(top, @outerColor 0%, @innerColor 50%, @outerColor 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@outerColor), color-stop(50%,@innerColor), color-stop(100%,@outerColor)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, @outerColor 0%,@innerColor 50%,@outerColor 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, @outerColor 0%,@innerColor 50%,@outerColor 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, @outerColor 0%,@innerColor 50%,@outerColor 100%); /* IE10+ */
+background: linear-gradient(to bottom, @outerColor 0%,@innerColor 50%,@outerColor 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@innerColor', endColorstr='@outerColor',GradientType=0 ); /* IE6-9 */
+}
+
+
+.framedBackground(@borderColor, @backgroundColor, @fontColor){
+  border:4px solid @borderColor;
+  background: @backgroundColor;
+  border-radius: 10px;
+color:@fontColor;
+}
+
+
+.topGradient(@topColor, @bottomColor){
+  background: linear-gradient(to bottom, @topColor 0%, @bottomColor 36%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.greenButton(){
+background: #003a02; /* Old browsers */
+background: -moz-linear-gradient(top, #003a02 0%, #3ed127 42%, #96e84a 52%, #116b00 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#003a02), color-stop(42%,#3ed127), color-stop(52%,#96e84a), color-stop(100%,#116b00)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #003a02 0%,#3ed127 42%,#96e84a 52%,#116b00 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #003a02 0%,#3ed127 42%,#96e84a 52%,#116b00 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #003a02 0%,#3ed127 42%,#96e84a 52%,#116b00 100%); /* IE10+ */
+background: linear-gradient(to bottom, #003a02 0%,#3ed127 42%,#96e84a 52%,#116b00 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003a02', endColorstr='#116b00',GradientType=0 ); /* IE6-9 */
+}
+
+.dropdown(){
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AEAEAE;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px #CCCCCC inset;
+    color: #747474;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+    margin: 8px 0 3px 15px;
+    padding: 4px 8px;
+    vertical-align: middle;
+    width: 201px;
+}

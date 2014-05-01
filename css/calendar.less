@@ -1,0 +1,72 @@
+#eb-calendar, #ui-datepicker-div{
+
+  margin:0 auto;
+  color:black;
+  table, td{
+    border:black 1px solid;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    margin:0 auto;
+    background:white
+  }
+
+  td{
+    padding:2px
+  }
+
+  .today{
+    background:lightgreen
+  }
+
+  caption, .ui-datepicker-header{
+    margin-bottom:0px;
+    text-align:center;
+    font-weight:bold;
+    background:#56a5ec
+  }
+ 
+}
+
+#eb-calendar{
+  width:100%;
+  table{
+    tr.days td{
+      height:auto;
+    }
+    td{
+      height: 84px;
+      max-width: 84px;
+      min-width: 84px;
+      vertical-align: top;
+    }
+  }
+  
+}
+
+#ui-datepicker-div{
+  .ui-datepicker-title{
+    
+  }
+  
+   .ui-datepicker-prev{
+    float:left;
+    font-size:10px;
+  }
+  .ui-datepicker-next{
+    float:right;
+    font-size:10px;
+  }
+}
+
+.calendarMobile(){
+  #eb-calendar{
+  table{
+    td{
+      height: 24px;
+      max-width: 24px;
+      min-width: 24px;
+    }
+  }
+  
+}
+}
