@@ -1,6 +1,6 @@
 <?php
 /**
- * @package eben_calendar
+ * @package calendar
  * @version 1
  */
 /*
@@ -11,7 +11,7 @@ Version: 1
 Author URI: http://ebenshapiro.com/
 */
 
-class EbenCalendar{
+class Calendar{
 
   public $monthString;
   public $monthNum;
@@ -24,6 +24,9 @@ class EbenCalendar{
   public $firstOfMonth;
   public $daysInMonth;
   public $dayOfTheWeek;
+  
+  public $end;
+  public $start;
 
   function __construct($timeToFind=null){
     
@@ -57,6 +60,9 @@ class EbenCalendar{
     $this->daysInMonth=date('t', $firstInTime);
     
     $this->startDayOfTheWeek= date('w',$firstInTime);
+    
+    $this->start = $this->year.'-'.$this->monthNum.'-1';
+    $this->end = $this->year.'-'.$this->monthNum.'-'.$this->daysInMonth;
     
   }
 
@@ -93,7 +99,10 @@ class EbenCalendar{
         }
         //print a number if i still matches the number of days in a month
         if ($i>0 &&$i<=$this->daysInMonth){
-          echo ($i);
+          echo ('<p>'.$i.'</p>');
+          if($callBack){
+            call_user_func_array(array($this, $callBack), array($i));
+          }
         }
         echo '</td>';
       if($weekCount==6){

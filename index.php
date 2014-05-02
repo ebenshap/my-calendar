@@ -1,6 +1,8 @@
 <?php
-include_once('calendar/ebenCalendar.php');
+include_once('calendar/eventCalendar.php');
 include_once('form/form.php');
+require_once('eventModel.php');
+require_once('config.php')
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -15,11 +17,14 @@ include_once('form/form.php');
   <h1>Enter An Event</h1>
 </div>
 <?php
-  $basicCalendar = new EbenCalendar();
-  $basicCalendar->draw();
+  $model = new EventModel($dbHost, $dbName, $dbUser, $dbPass);
   
-  $form = new Form();
-  $form->printForm();
+  $calendar = new EventCalendar(null, $model);
+  echo '<div id="calendar">';
+  $calendar->draw();
+  echo '</div>';
+  $form = new Form($model);
+  $form->printForm($_POST);
 
 ?>
 
