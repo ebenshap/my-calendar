@@ -1,0 +1,1 @@
+This is a code sample to demonstrate some object oriented php. It's a simple calendar that the user can post events to. Right now events can only be printed to the current month, but eventually I want to make it so you can add events to the past and future months. I also want to allow the user to click on the event titles to reveal more event information. 
